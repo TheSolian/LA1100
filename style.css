@@ -8,6 +8,23 @@
     vertical-align: baseline;
     background: transparent;
 }
+
+h1 {
+    text-align: center;
+    font-size: 120%;
+}
+
+p{
+    margin: 8px;
+}
+
+:root {
+    --backgroundMain: rgb(254, 255, 240);
+    --backgroundFooter: rgb(132, 132, 132);
+}
+
+/* ----- background -----*/
+
 #skyAndDirt{
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 20, 0.5), rgba(4, 9, 20, 0.5)), url(SkyAndDirt.png);
@@ -23,18 +40,75 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    min-height: 500vh;
+    min-height: 400vh; /*Länge des Backgrounds ändern*/
 }
 
-h1 {
+
+/* ----- main -----*/
+
+.minecraft{
+    width: 80%;
+    margin: auto;
     text-align: center;
-    font-size: 120%;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
-p {
-    margin: 8px;
+.row {
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
 }
 
-:root {
-    /*Variabel*/
+.minecraft-col {
+    flex-basis: 100%;
+    background: var(--backgroundMain);
+    border-radius: 15px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.minecraft-col p {
+    text-align: left;
+    margin-left: 3%;
+    line-height: 18px;
+}
+
+@media (max-width: 700px) {
+    .row {
+        flex-flow: column;
+    }
+
+    .minecraft-col {
+        margin: 10px;
+    }
+
+    .minecraft-col p {
+        background: var(--backgroundMain);
+        text-align: left;
+        margin-left: 5%;
+        font-size: 96%;
+    }
+}
+
+/* ----- footer -----*/
+
+footer {
+    width: 100%;
+    margin: 0px 10px 0px 0px;
+    padding: 20px;
+    clear: both;
+    background: var(--backgroundFooter);
+}
+
+footer h5 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+footer p {
+    text-align: center;
+    margin: 5px 0;
+    line-height: 20px;
 }
