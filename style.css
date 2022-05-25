@@ -1,10 +1,4 @@
-:root {
-    /* Variablen */
-}
-
-*,
-*::before,
-*::after {
+* {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
@@ -14,13 +8,33 @@
     vertical-align: baseline;
     background: transparent;
 }
+#skyAndDirt{
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 20, 0.5), rgba(4, 9, 20, 0.5)), url(SkyAndDirt.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 50vh;
+}
+
+.hintergrund{
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 20, 0.5), rgba(4, 9, 20, 0.5)), url(darkgrayBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 500vh;
+}
 
 h1 {
-    margin: 30px;
     text-align: center;
     font-size: 120%;
 }
 
 p {
     margin: 8px;
+}
+
+:root {
+    /*Variabel*/
 }
