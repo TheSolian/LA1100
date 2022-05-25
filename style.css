@@ -15,12 +15,34 @@
     background: transparent;
 }
 
-h1 {
-    margin: 30px;
-    text-align: center;
-    font-size: 120%;
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "footer footer";
+    min-height: 100vh;
 }
 
-p {
-    margin: 8px;
+header {
+    grid-area: header;
+    background-color: red;
+}
+
+nav {
+    grid-area: nav;
+    background-color: blue;
+}
+
+main {
+    grid-area: main;
+    background-color: yellow;
+}
+
+footer {
+    grid-area: footer;
+    background-color: green;
 }
