@@ -127,6 +127,36 @@ nav a:hover {
     }
 }
 
+/* ----- form -----*/
+
+form {
+    padding: 10px;
+    background-color: rgb(170, 170, 170);
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+form input,
+form textarea {
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 94%;
+}
+
+form button {
+    background-color: rgb(165, 202, 255);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+form button:hover {
+    background-color: rgb(129, 180, 252);
+}
+
 /* ----- footer -----*/
 
 footer {
