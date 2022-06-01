@@ -12,54 +12,55 @@
 :root {
     --backgroundMain: rgb(254, 255, 240);
     --backgroundFooter: rgb(132, 132, 132);
-    --bg:#000000;
-    --text:#ffffff;
+    --bg: #000000;
+    --text: #ffffff;
 }
 
 /*---- Dark Mode ----*/
 
-#dark-mode:checked ~ .color-scheme-wrapper {
-       --bg:#fff;
-       --text:#333;
-}
-   
-   
-.color-scheme-wrapper {
-       background:var(--bg);
-       color:var(--text);
+#dark-mode:checked~.color-scheme-wrapper {
+    --bg: #fff;
+    --text: #333;
 }
 
+.color-scheme-wrapper {
+    background: var(--bg);
+    color: var(--text);
+}
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg:white;
-	--text:black;
-	}
+        --bg: white;
+        --text: black;
+    }
 }
 
-#color-mode:checked ~ .color-scheme-wrapper {
-	--bg:white;
-	--text:black;
+#color-mode:checked~.color-scheme-wrapper {
+    --bg: white;
+    --text: black;
 }
 
 @media (prefers-color-scheme: dark) {
-    #color-mode:checked ~ .color-scheme-wrapper {
-        --bg:black;
-        --text:white;
+    #color-mode:checked~.color-scheme-wrapper {
+        --bg: black;
+        --text: white;
     }
-    #color-mode:checked ~ .color-scheme-wrapper .minecraft-col{
+
+    #color-mode:checked~.color-scheme-wrapper .minecraft-col {
         background-color: black;
     }
-    #color-mode:checked ~ .color-scheme-wrapper nav a {
+
+    #color-mode:checked~.color-scheme-wrapper nav a {
         color: white;
         background-color: black;
     }
-    
-}   
+
+}
+
 .color-scheme-wrapper {
-    min-height:100vh;
-    background:var(--bg);
-    color:var(--text);
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
 }
 
 h1 {
