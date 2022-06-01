@@ -15,10 +15,6 @@ h1 {
     font-size: 120%;
 }
 
-p {
-    margin: 8px;
-}
-
 :root {
     --backgroundMain: rgb(254, 255, 240);
     --backgroundFooter: rgb(132, 132, 132);
@@ -26,7 +22,7 @@ p {
 
 /* ----- background -----*/
 
-#skyAndDirt {
+#skyAndDirt{
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 20, 0.5), rgba(4, 9, 20, 0.5)), url(SkyAndDirt.png);
     background-position: center;
@@ -41,7 +37,7 @@ p {
     background-position: center;
     background-size: cover;
     position: relative;
-    min-height: 400vh;
+    min-height: 30vh;
     /*Länge des Backgrounds ändern*/
 }
 
@@ -96,6 +92,12 @@ nav li:last-child a {
 }
 
 @media (max-width: 700px) {
+    .minecraft {
+        width: 95%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 50px;
+    }
     .row {
         flex-flow: column;
     }
@@ -107,7 +109,7 @@ nav li:last-child a {
     .minecraft-col p {
         background: var(--backgroundMain);
         text-align: left;
-        margin-left: 5%;
+        margin-left: 2%;
         font-size: 96%;
     }
 }
