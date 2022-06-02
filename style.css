@@ -1,83 +1,60 @@
+/*---- reset ----*/
+
 * {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 96%;
+    font-size: 95%;
     vertical-align: baseline;
     background: transparent;
 }
 
+/*---- dark mode ----*/
+
+#mode-label {
+    color: var(--white);
+    font-size: 0.75rem;
+}
+
 :root {
-    --backgroundMain: rgb(254, 255, 240);
-    --backgroundFooter: rgb(132, 132, 132);
-    --bg: #000000;
-    --text: #ffffff;
-}
-
-/*---- Dark Mode ----*/
-
-#dark-mode:checked~.color-scheme-wrapper {
-    --bg: #fff;
-    --text: #333;
-}
-
-.color-scheme-wrapper {
-    background: var(--bg);
-    color: var(--text);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: white;
-        --text: black;
-    }
-}
-
-#color-mode:checked~.color-scheme-wrapper {
+    --white: white;
     --bg: white;
     --text: black;
 }
 
+#mode-checkbox:checked~* {
+    --bg: black;
+    --text: white;
+}
+
 @media (prefers-color-scheme: dark) {
-    #color-mode:checked~.color-scheme-wrapper {
+    #mode-label {
+        font-size: 0px;
+    }
+
+    #mode-label:before {
+        content: "Light Mode";
+        font-size: 0.75rem;
+    }
+
+    :root {
         --bg: black;
         --text: white;
     }
 
-    #color-mode:checked~.color-scheme-wrapper .minecraft-col {
-        background-color: black;
+    #mode-checkbox:checked~* {
+        --bg: rgb(255, 255, 255);
+        --text: rgb(0, 0, 0);
     }
-
-    #color-mode:checked~.color-scheme-wrapper nav a {
-        color: white;
-        background-color: black;
-    }
-
-}
-
-.color-scheme-wrapper {
-    min-height: 100vh;
-    background: var(--bg);
-    color: var(--text);
-}
-
-h1 {
-    color: var(--backgroundMain);
-    padding-top: 20px;
-    text-align: center;
-    font-size: 120%;
-}
-
-header {
-    text-align: center;
-    color: var(--backgroundMain);
 }
 
 /* ----- background -----*/
 
-#skyAndDirt {
+header {
+    text-align: center;
+    color: var(--white);
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 20, 0.5), rgba(4, 9, 20, 0.5)), url(SkyAndDirt.png);
     background-position: center;
@@ -86,14 +63,19 @@ header {
     min-height: 50vh;
 }
 
-.hintergrund {
+h1 {
+    color: var(--white);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 113%;
+}
+
+body {
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 20, 0.5), rgba(4, 9, 20, 0.5)), url(darkgrayBackground.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
-    min-height: 30vh;
-    /*Länge des Backgrounds ändern*/
 }
 
 /* ----- nav -----*/
@@ -103,40 +85,37 @@ nav {
 }
 
 nav a {
-    color: black;
+    color: var(--text);
     text-decoration: none;
-    background-color: var(--backgroundMain);
-    border: 1px solid black;
+    background-color: var(--bg);
+    border: 1px solid var(--text);
     border-bottom: none;
     padding: 15px;
     display: block;
     text-align: center;
 }
 
-nav li:last-child a {
-    border-bottom: 1px solid black;
+nav a:last-child {
+    border-bottom: 1px solid var(--text);
 }
 
 nav a:hover {
-    background-color: lightgrey;
+    background-color: gray;
 }
 
 /* ----- main -----*/
 
-.minecraft {
+article {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-bottom: 50px;
+    color: var(--text);
 }
 
-.row {
-    margin-top: 4%;
+section {
+    margin: 30px 0px;
     display: flex;
     justify-content: space-between;
-}
-
-.minecraft-col {
     flex-basis: 100%;
     background: var(--bg);
     border-radius: 15px;
@@ -144,45 +123,21 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-.minecraft-col p {
+section p {
     text-align: left;
     margin-left: 3%;
     line-height: 18px;
-}
-
-/* ----- responsive -----*/
-
-@media (max-width: 700px) {
-    .minecraft {
-        width: 95%;
-        margin: auto;
-        text-align: center;
-        padding-bottom: 50px;
-    }
-
-    .row {
-        flex-flow: column;
-    }
-
-    .minecraft-col {
-        margin: 10px;
-    }
-
-    .minecraft-col p {
-        background: var(--backgroundMain);
-        text-align: left;
-        margin-left: 2%;
-        font-size: 96%;
-    }
 }
 
 /* ----- form -----*/
 
 form {
     padding: 10px;
+    margin-top: 50px;
     background-color: rgb(170, 170, 170);
     border-bottom: 1px solid black;
     text-align: center;
+    color: var(--text);
 }
 
 form input,
@@ -193,6 +148,12 @@ form textarea {
     padding: 5px;
     margin-bottom: 10px;
     width: 94%;
+    font-size: 80%;
+}
+
+form textarea {
+    height: 70px;
+    line-height: 12px;
 }
 
 form button {
@@ -200,6 +161,7 @@ form button {
     border: 1px solid gray;
     border-radius: 5px;
     padding: 5px;
+    color: var(--text);
 }
 
 form button:hover {
@@ -212,7 +174,8 @@ footer {
     width: auto;
     padding: 20px;
     clear: both;
-    background: var(--backgroundFooter);
+    background: rgb(132, 132, 132);
+    color: var(--text);
 }
 
 footer h5 {
@@ -225,4 +188,25 @@ footer p {
     text-align: center;
     margin: 5px 0;
     line-height: 20px;
+}
+
+/* ----- responsive -----*/
+
+@media (max-width: 700px) {
+    article {
+        width: 95%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    section {
+        flex-flow: column;
+    }
+
+    section p {
+        text-align: left;
+        margin-left: 2%;
+        font-size: 96%;
+    }
 }
