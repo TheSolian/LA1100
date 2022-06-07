@@ -27,14 +27,14 @@
         <ul>
             <li><a href="index.html">Startseite</a></li>
             <li><a href="unterseite1.html">Unterseite 1</a></li>
-            <li><a href=".html">Link</a></li>
-            <li><a href=".html">Link</a></li>
-            <li><a href=".html">Link</a></li>
+            <li><a href="#steve">Steve</a></li>
+            <li><a href="#steve2">Steve2</a></li>
+            <li><a href="">Link</a></li>
         </ul>
     </nav>
     <article>
         <h1>Allgemeine Minecraftsachen</h1>
-        <section>
+        <section id="steve">
             <h3>Steve</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius atque? Aperiam,
                 suscipit veniam? Distinctio amet incidunt esse harum dolore libero deleniti aut
@@ -47,20 +47,28 @@
                 nisi ullam quia, tenetur autem accusamus suscipit necessitatibus quae similique possimus.
             </p>
         </section>
+        <section id="steve2">
+            <h3>Steve2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eius atque? Aperiam,
+                suscipit veniam? Distinctio amet incidunt esse harum dolore libero deleniti aut
+                reprehenderit saepe blanditiis nihil exercitationem quasi dolorem corporis, officiis
+                voluptatem culpa ut quaerat accusantium beatae. Reiciendis distinctio impedit eligendi
+                perferendis praesentium, facilis ullam. Et ipsam fugiat aliquam, quos quo, odio incidunt
+                possimus quaerat nulla tempora architecto ut reiciendis cupiditate voluptatibus alias, optio
+                sequi facilis eaque repellendus necessitatibus aliquid adipisci? Architecto voluptatibus eos
+                numquam ab dicta, id omnis, quo magni iusto culpa voluptas libero, iste labore? Delectus
+                nisi ullam quia, tenetur autem accusamus suscipit necessitatibus quae similique possimus.
+            </p>
+        </section>
     </article>
-    <form action="https://formspree.io/f/myyoovjk" method="POST">
-        <label>
-            Your email:<br>
-            <input type="email" name="email">
-        </label><br>
-        <label>
-            Your message:<br>
-            <textarea name="message"></textarea>
-        </label><br>
-        <button type="submit">Send</button>
-    </form>
     <footer>
-        <h5>ÜBER UNS</h5>
+        <h5>FEEDBACK</h5>
+        <form action="https://formspree.io/f/myyoovjk" method="POST">
+            <input type="email" name="email" placeholder="E-Mail-Adresse">
+            <textarea name="message" placeholder="Feedback"></textarea>
+            <button type="submit">Senden</button>
+        </form>
+        <h5>UEBER UNS</h5>
         <p>Schüler aus der IMS Baden. <br>
             Diese Website wurde für ein Projekt erstellt und darf nicht ohne Erlaubnis wiederverwendet werden.
         </p>
