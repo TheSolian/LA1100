@@ -130,12 +130,14 @@ section {
 
 section h3 {
     flex: 1;
+    padding-right: 10px;
+    line-height: 20px;
 }
 
 section p {
     flex: 6;
     margin-left: 10px;
-    line-height: 18px;
+    line-height: 22px;
 }
 
 /* ----- footer -----*/
