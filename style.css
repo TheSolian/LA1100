@@ -115,6 +115,7 @@ article {
     width: 80%;
     margin: auto;
     text-align: center;
+    align-items: center;
     color: var(--text);
 }
 
