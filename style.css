@@ -28,6 +28,11 @@
     --bg: white;
     --white: white;
     --formBorder: rgb(104, 104, 104);
+    --navColor: rgb(14, 79, 97);
+    --footerColor: rgb(132, 132, 132);
+    --formBackground: rgb(161, 161, 161);
+    --buttonColor: rgb(138, 187, 255);
+    --buttonHoverColor: rgb(97, 163, 255);
 }
 
 #mode-checkbox:checked~* {
@@ -102,7 +107,7 @@ nav li:last-child a:last-child {
 nav a {
     color: var(--text);
     text-decoration: none;
-    background-color: rgb(44, 134, 179);
+    background-color: var(--navColor);
     padding: 15px;
     display: block;
     text-align: center;
@@ -163,7 +168,7 @@ section a {
 
 footer {
     padding: 20px;
-    background: rgb(132, 132, 132);
+    background: var(--footerColor);
     color: var(--text);
     text-align: center;
 }
@@ -192,7 +197,7 @@ form * {
 
 form input,
 textarea {
-    background-color: rgb(161, 161, 161);
+    background-color: var(--formBackground);
     width: 94%;
     font-size: 80%;
     color: var(--text);
@@ -209,11 +214,11 @@ textarea {
 
 button {
     color: var(--text);
-    background-color: rgb(138, 187, 255);
+    background-color: var(--buttonColor);
 }
 
 button:hover {
-    background-color: rgb(97, 163, 255);
+    background-color: var(--buttonHoverColor);
 }
 
 /* ----- responsive -----*/
