@@ -1,2 +1,2 @@
 # LA1100
-https://mcupdates.netlify.app
+https://mcwiki.netlify.app
