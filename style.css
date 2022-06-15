@@ -28,7 +28,8 @@
     --bg: white;
     --white: white;
     --formBorder: rgb(104, 104, 104);
-    --navColor: rgb(14, 79, 97);
+    --navColorDM: rgb(14, 79, 97);
+    --navColorLM: rgb(113, 183, 203);
     --footerColor: rgb(132, 132, 132);
     --formBackground: rgb(161, 161, 161);
     --buttonColor: rgb(138, 187, 255);
@@ -49,7 +50,6 @@
         content: "Light Mode";
         font-size: 0.75rem;
     }
-
     :root {
         --bg: black;
         --text: white;
@@ -107,7 +107,7 @@ nav li:last-child a:last-child {
 nav a {
     color: var(--text);
     text-decoration: none;
-    background-color: var(--navColor);
+    background-color: var(--navColorDM);
     padding: 15px;
     display: block;
     text-align: center;
