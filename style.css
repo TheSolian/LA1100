@@ -11,18 +11,6 @@
     background: transparent;
 }
 
-/*---- dark mode ----*/
-
-#mode-checkbox {
-    margin-bottom: 1px;
-}
-
-#mode-label {
-    color: var(--white);
-    font-size: 0.75rem;
-    margin: 0px 1px 0px -10px;
-}
-
 :root {
     --text: black;
     --bg: white;
@@ -33,6 +21,18 @@
     --formBackground: rgb(161, 161, 161);
     --buttonColor: rgb(138, 187, 255);
     --buttonHoverColor: rgb(97, 163, 255);
+}
+
+/*---- dark mode ----*/
+
+#mode-checkbox {
+    margin-bottom: 1px;
+}
+
+#mode-label {
+    color: var(--white);
+    font-size: 0.75rem;
+    margin: 0px 1px 0px -10px;
 }
 
 #mode-checkbox:checked~* {
@@ -49,6 +49,7 @@
         content: "Light Mode";
         font-size: 0.75rem;
     }
+
     :root {
         --bg: black;
         --text: white;
@@ -59,7 +60,6 @@
         --text: rgb(0, 0, 0);
         --navColor: rgb(55, 164, 194);
     }
-
 }
 
 /* ----- background -----*/
