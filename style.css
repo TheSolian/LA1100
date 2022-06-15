@@ -200,7 +200,7 @@ button:hover {
 
 /* ----- responsive -----*/
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     article {
         width: 95%;
     }
@@ -221,7 +221,7 @@ button:hover {
     }
 }
 
-@media (min-width: 701px) {
+@media (min-width: 1001px) {
     nav ul {
         display: flex;
         justify-content: space-between;
