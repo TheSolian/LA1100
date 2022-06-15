@@ -49,6 +49,7 @@
         content: "Light Mode";
         font-size: 0.75rem;
     }
+
     :root {
         --bg: black;
         --text: white;
