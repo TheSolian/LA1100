@@ -28,8 +28,7 @@
     --bg: white;
     --white: white;
     --formBorder: rgb(104, 104, 104);
-    --navColorDM: rgb(14, 79, 97);
-    --navColorLM: rgb(113, 183, 203);
+    --navColor: rgb(14, 79, 97);
     --footerColor: rgb(132, 132, 132);
     --formBackground: rgb(161, 161, 161);
     --buttonColor: rgb(138, 187, 255);
@@ -58,7 +57,9 @@
     #mode-checkbox:checked~* {
         --bg: rgb(255, 255, 255);
         --text: rgb(0, 0, 0);
+        --navColor: rgb(55, 164, 194);
     }
+
 }
 
 /* ----- background -----*/
@@ -107,7 +108,7 @@ nav li:last-child a:last-child {
 nav a {
     color: var(--text);
     text-decoration: none;
-    background-color: var(--navColorDM);
+    background-color: var(--navColor);
     padding: 15px;
     display: block;
     text-align: center;
