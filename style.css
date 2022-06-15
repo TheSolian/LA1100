@@ -143,20 +143,19 @@ article {
 section {
     margin: 30px 0px;
     display: flex;
-    align-items: baseline;
     background: var(--bg);
     border-radius: 15px;
     padding: 10px 14px;
     text-align: left;
 }
 
-section h3 {
+.section-content {
     flex: 1;
     padding-right: 10px;
     line-height: 20px;
 }
 
-section p,
+
 section a {
     flex: 6;
     margin-left: 10px;
@@ -229,7 +228,7 @@ button:hover {
         width: 95%;
     }
 
-    section {
+    /* section {
         flex-flow: column;
         align-items: center;
         padding: 10px;
@@ -243,7 +242,7 @@ button:hover {
     section a {
         margin-left: 0px;
         font-size: 120%;
-    }
+    } */
 }
 
 @media (min-width: 701px) {
@@ -285,5 +284,9 @@ button:hover {
     li:hover *,
     #active:hover * {
         display: block;
+    }
+
+    .img {
+        width: 50%;
     }
 }
