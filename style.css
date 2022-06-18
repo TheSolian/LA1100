@@ -150,6 +150,7 @@ article {
     text-align: center;
     align-items: center;
     color: var(--text);
+    line-height: 18px;
 }
 
 section {
@@ -167,6 +168,7 @@ section h3 {
     padding: 2px 6px 0px 6px;
     margin-bottom: 2.5px;
     line-height: 20px;
+    font-family: Calibri;
 }
 
 section p,
