@@ -297,6 +297,10 @@ button:hover {
         position: sticky;
     }
 
+    nav li {
+        min-width: 162px;
+    }
+
     nav a:last-child {
         border-bottom: 1px solid var(--text);
     }
